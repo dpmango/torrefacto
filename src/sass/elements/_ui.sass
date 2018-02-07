@@ -1,0 +1,226 @@
+// --------------------------
+// -----------text-----------
+// --------------------------
+.text
+  line-height: 1.5
+  color: $mainColor
+  overflow-wrap: break-word
+  word-wrap: break-word
+  word-break: break-word
+  &--small
+    font-size: 1.1666rem
+  &--medium
+    font-size: 1.3333rem
+  &--bold
+    font-weight: 700
+  &--footer
+    color: #fff
+    span
+      &:not(:last-of-type)
+        margin-right: 10px
+
+// --------------------------
+// ---------headings---------
+// --------------------------
+.heading-l2
+  font-weight: 900
+  font-size: 2.1666rem
+  margin-bottom: 30px
+
+.heading-l3
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-size: 1rem
+  margin-bottom: 10px
+
+.button
+  position: relative
+  text-transform: uppercase
+  border-radius: 3px
+  letter-spacing: 2px
+  font-weight: 700
+  display: inline-block
+  outline: none
+  border: none
+  height: 35px
+  line-height: 35px
+  overflow: hidden
+  cursor: pointer
+  &__inner
+    position: relative
+    z-index: 2
+  &:before
+    position: absolute
+    transition: .3s
+    z-index: 1
+    content: ''
+    width: 500px
+    height: 500px
+    left: 50%
+    top: 50%
+    margin-left: -250px
+    margin-top: -250px
+    border-radius: 50%
+    transform: scale(0)
+  &--green
+    background-color: $green
+    color: #fff
+    &:before
+      background-color: darken($green, 5%)
+  &--white
+    background-color: #fff
+    color: $mainColor
+    &:before
+      background-color: darken(white, 5%)
+  &:hover
+    &:before
+      transform: scale(1)
+
+=link-hover($bgc)
+  &:after
+    position: absolute
+    transition: .3s
+    content: ''
+    top: calc(100% + 1px)
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: $bgc
+  &:hover
+    &:after
+      height: 3px
+
+.link
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-weight: 700
+  &--underline
+    +link-hover($mainColor)
+    position: relative
+
+.link-wrap
+  text-align: center
+  width: 100%
+
+.text-link
+  position: relative
+  display: inline-block
+  text-decoration: underline
+  color: $yellow
+  transition: .3s
+  word-break: break-word
+  &:hover
+    padding-left: 10px
+    padding-right: 10px
+    background-color: $yellow
+    color: #fff
+
+.input
+  transition: .3s
+  outline: none
+  height: 35px
+  line-height: 33px
+  padding: 0 15px
+  border: 1px solid $lightGray
+  border-radius: 3px
+  font-size: 1.1666rem
+  color: $mainColor
+  &::placeholder
+    text-transform: uppercase
+    color: $lightGray
+  &--big
+    width: 100%
+    height: 100px
+    margin-bottom: 20px
+    padding: 10px 10px
+    line-height: 1.5
+    color: $mainColor
+    resize: none
+  &:focus
+    border-color: $mainColor
+
+.select--wide
+  .list
+    width: 100%
+  .current
+    color: $lightGray
+  .current,
+  .option
+    text-transform: uppercase
+  .open
+    border-color: $mainColor
+
+.label-small
+  font-size: 1rem
+  margin-bottom: 5px
+
+.label-medium
+  font-size: 1.1666rem
+  margin-bottom: 10px
+
+.checkbox
+  input
+    +hide
+  label
+    display: flex
+    align-items: flex-start
+  .checkbox-icon,
+  .checkbox-text
+    display: inline-block
+    vertical-align: middle
+  .checkbox-icon
+    position: relative
+    border-radius: 50%
+    min-width: 10px
+    width: 10px
+    height: 10px
+    margin-right: 10px
+    margin-top: 4px
+    border: 1px solid $mainColor
+    &:after
+      position: absolute
+      border-radius: 50%
+      transition: .3s
+      content: ''
+      left: 50%
+      top: 50%
+      margin-left: -3px
+      margin-top: -3px
+      width: 6px
+      height: 6px
+      background-color: $mainColor
+      opacity: 0
+      visibility: hidden
+  input:checked + label
+    .checkbox-icon
+      &:after
+        opacity: 1
+        visibility: visible
+
+.mobile-content
+  +hide
+  +phone
+    display: block
+
+.desktop-content
+  +phone
+    +hide
+
+.list__el
+  line-height: 1.6
+  &--dashed
+    border-bottom: 1px dashed $mainColor
+  +phone
+    font-size: 1.2rem
+
+.list__key,
+.list__value
+  display: inline-block
+  vertical-align: top
+
+.list__key
+  font-weight: 700
+  width: 320px
+  +phone
+    width: 180px

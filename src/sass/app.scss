@@ -1,0 +1,26 @@
+@import 'utilities/variables';
+@import 'utilities/grid';
+
+@import 'vendor/normalize';
+@import 'vendor/slick.scss';
+@import 'vendor/nice-select.scss';
+@import 'vendor/magnific-popup.scss';
+
+@import 'layout/font';
+@import 'layout/general';
+
+@import 'generated/sprite-svg';
+@import 'generated/sprite-png';
+
+@import 'elements/buttons';
+@import 'elements/icons';
+@import 'elements/ui';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/index';
+@import 'components/back';
+@import 'components/sticky-nav';
+@import 'components/similar';
+@import 'components/post';
+@import 'components/card';

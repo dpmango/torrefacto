@@ -1,0 +1,35 @@
+.back-row
+  +row(flex-start)
+  position: relative
+  margin-top: 35px
+  margin-bottom: 30px
+  .link
+    .ico
+      display: inline-block
+      vertical-align: middle
+      margin-right: 10px
+    span
+      display: inline-block
+      vertical-align: middle
+  +tablet
+    display: block
+    margin: 0
+    margin-bottom: 25px
+    padding: 0
+    text-align: center
+    border-bottom: 1px solid $lightGray
+    &:hover
+      background-color: #f8f8f8
+    .link
+      display: block
+      height: 60px
+      line-height: 70px
+      .ico
+        position: absolute
+        left: 15px
+        top: 25px
+        margin-top: 0
+      span
+        border: none
+        &:after
+          display: none

@@ -1,0 +1,91 @@
+// footer
+.footer
+  padding: 40px 0
+  font-size: 1.1666rem
+  background-color: $mainColor
+  color: #fff
+  +tablet
+    padding: 15px 0
+
+.footer__row
+  +row(flex-start, flex-start)
+
+.footer__col
+  +col(2)
+  +tablet
+    +hide
+
+.footer__col,
+.footer__join
+  .heading-l3
+    margin-bottom: 15px
+
+.footer__join
+  +col(6)
+  display: flex
+  justify-content: flex-end
+  .text
+    &:not(:last-of-type)
+      margin-bottom: 10px
+  +tablet
+    +col(12, null)
+    justify-content: flex-start
+    .heading-l3
+      +hide
+    .text
+      &:not(:last-of-type)
+        +hide
+
+.footer-nav
+  max-width: 115px
+
+.footer-nav__link
+  position: relative
+  line-height: 1.8
+  +navigationHover(white, 9px)
+
+.socials
+  display: flex
+  margin-bottom: 15px
+  align-items: center
+  +tablet
+    +hide
+
+.socials__el
+  &:not(:last-of-type)
+    margin-right: 10px
+
+.socials__link
+  position: relative
+  display: block
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  transition: .3s
+  .ico
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: .3s
+  .ico-vk
+    font-size: .9rem
+  .ico-yt
+    font-size: 1rem
+  .ico-insta
+    font-size: 1rem
+  &:hover
+    background-color: #fff
+    box-shadow: 0 0 0 3px lighten($mainColor, 10%)
+    .ico-fb
+      color: $fb
+    .ico-vk
+      color: $vk
+    .ico-yt
+      color: $yt
+    .ico-insta
+      color: $in
+
+.footer-link
+  position: relative
+  +link-hover(white)

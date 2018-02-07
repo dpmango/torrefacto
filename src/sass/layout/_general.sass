@@ -1,0 +1,192 @@
+*
+  box-sizing: border-box
+
+html
+  font-size: 12px
+
+body
+  font-size: 1rem
+  font-family: 'Circe'
+  font-weight: 400
+
+h2,
+h3,
+p,
+ul
+  margin: 0
+
+ul,
+li
+  padding: 0
+  list-style: none
+
+a
+  outline: none
+  color: inherit
+  text-decoration: none
+  -webkit-appearance: none
+
+input,
+button,
+textarea
+  border: none
+  outline: none
+  font-family: 'Circe'
+  -webkit-appearance: none
+  font-size: 1rem
+  background-color: transparent
+
+button
+  padding: 0
+
+label
+  cursor: pointer
+
+// index main section
+.about-product
+  +row(null, flex-start)
+  position: relative
+  padding-top: 50px
+  +tablet
+    padding-left: 0
+    padding-right: 0
+    &:after,
+    &:before
+      position: absolute
+      left: 0
+      content: ''
+      height: 1px
+      width: 100%
+      background-color: $lightGray
+    &:before
+      top: 0
+    &:after
+      top: 51px
+
+.currentSlide
+  position: absolute
+  text-transform: uppercase
+  top: 20px
+  left: 50%
+  transform: translateX(-50%)
+
+// index content section
+.about-product__content
+  +col(8, null)
+  position: relative
+  +tablet
+    +col(12, null)
+
+  .slick-prev,
+  .slick-next
+    position: absolute
+    outline: none
+    border: none
+    top: -49px
+    padding: 0
+    width: 50px
+    height: 50px
+    background-color: transparent
+    &:hover
+      background-color: #f8f8f8
+  .slick-prev
+    padding-top: 5px
+    left: 0
+  .slick-next
+    right: 0
+    transform: rotate(180deg)
+
+// index sidebar
+.about-product__side
+  +col(4, null)
+  display: flex
+  justify-content: flex-end
+  padding-top: 95px
+  padding-right: 40px
+  .heading-l2
+    display: none
+  +tablet
+    +col(12, null)
+    display: block
+    padding-top: 30px
+    padding-bottom: 35px
+    .heading-l2
+      display: block
+      margin-left: 15px
+
+.about-product__section
+  padding-top: 35px
+  padding-bottom: 45px
+  outline: none
+  &:not(:last-of-type)
+    border-bottom: 1px dashed $mainColor
+  &:last-of-type
+    padding-bottom: 65px
+  +tablet
+    &:not(:last-of-type)
+      border-bottom: none
+    &:nth-of-type(n)
+      padding: 30px $gutter 50px
+
+.about-product__subsection
+  &:not(:last-of-type)
+    margin-bottom: 35px
+
+.about-product__image
+  border-radius: 3px
+  width: 100%
+  height: 360px
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  +laptop
+    height: 300px
+
+.tastes
+  display: flex
+
+.tastes__el
+  display: flex
+  align-items: center
+  border-radius: 3px
+  box-shadow: 0 3px 6px 0 fade-out(black, 0.8)
+  text-align: center
+  flex-direction: column
+  justify-content: flex-end
+  width: 110px
+  height: 110px
+  &:not(:last-of-type)
+    margin-right: 20px
+  .heading-l3
+    margin-top: 15px
+    margin-bottom: 15px
+  +phone
+    &:nth-of-type(3),
+    &:last-of-type
+      +hide
+
+.article
+  border-radius: 3px
+  box-shadow: 0 3px 6px 0 fade-out(black, 0.8)
+  padding: 20px
+  background-image: url(../img/map.png)
+  background-size: cover
+  color: #fff
+  .button
+    padding: 0 15px
+    +phone
+      width: 100%
+      text-align: center
+
+.discussion
+  padding-top: 30px
+  padding-bottom: 65px
+  background-color: $discusGray
+
+.discussion-row
+  +row(flex-start)
+
+.discussion-header
+  margin-bottom: 30px

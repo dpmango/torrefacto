@@ -1,0 +1,73 @@
+@mixin row($justify: center, $align: center) {
+  @if $display == block {
+  	font-size: 0;
+  } @else if $display == flex {
+    display: $display;
+		justify-content: $justify;
+		align-items: $align;
+    flex-wrap: wrap;
+  }
+
+  max-width: 960px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin col($n, $gutter: $gutter, $align: top) {
+  @if $display == block {
+    display: inline-block;
+    vertical-align: $align;
+    font-size: 1rem;
+  } @else if $display == flex {
+    $align: null;
+  }
+
+	@if $gutter == null {
+		padding: 0;
+	} @else {
+		padding: 0 $gutter;
+	}
+
+  width: 100% / $columns * $n;
+}
+
+@mixin offset-right($n) {
+	margin-right: 100% / $columns * $n;
+}
+
+@mixin offset-left($n) {
+	margin-left: 100% / $columns * $n;
+}
+
+@mixin desktop {
+  @media screen and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $extra-small) {
+    @content;
+  }
+}
+
+@mixin hide {
+	display: none;
+}
+
+@mixin show {
+	display: block;
+}

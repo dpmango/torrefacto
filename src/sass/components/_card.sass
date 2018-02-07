@@ -1,0 +1,51 @@
+.cards
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
+  padding-left: 50px
+  .ico-angle
+    position: absolute
+    top: 20px
+    left: 15px
+    font-size: 1.8rem
+  +phone
+    padding-left: 35px
+    .ico-angle
+      left: 0
+
+.card
+  display: flex
+  border-radius: 3px
+  transition: .3s
+  align-items: center
+  max-width: calc(50% - 10px)
+  width: 100%
+  height: 70px
+  padding: 0 20px
+  border: 1px solid $mainColor
+  &:nth-of-type(odd)
+    margin-right: 20px
+  &:nth-of-type(3),
+  &:nth-of-type(4)
+    margin-top: 20px
+  &:hover
+    box-shadow: 0 3px 6px 0 fade-out(black, 0.8)
+    border-color: transparent
+    .ico
+      color: $yellow
+  .heading-l3
+    line-height: 1.66
+    margin-bottom: 0
+    margin-right: auto
+  .ico
+    transition: .3s
+    font-size: 2.3rem
+  .circle
+    margin-right: 0
+  +phone
+    max-width: 100%
+    &:nth-of-type(n)
+      margin: 0
+    &:not(:last-of-type)
+      margin-bottom: 20px

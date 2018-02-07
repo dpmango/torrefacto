@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="21px" viewBox="0 0 17 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>стрелка</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="link-arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1.000000, 0.000000)">
+        <g id="стрелка" fill="#2D2319" fill-rule="nonzero">
+            <polygon id="Path-3" points="0.5 14.4501893 14.894962 14.4501893 14.894962 15.4501893 -0.5 15.4501893 -0.5 0 0.5 0"></polygon>
+            <polygon id="Path-4" points="9.91890755 10.6465221 10.6260143 9.93941536 15.7378367 15.0512377 10.608172 20.1809023 9.90106523 19.4737956 14.3236231 15.0512377"></polygon>
+        </g>
+    </g>
+</svg>

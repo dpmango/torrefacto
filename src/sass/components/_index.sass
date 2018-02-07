@@ -1,0 +1,294 @@
+// index
+.product
+  margin-bottom: 50px
+  +tablet
+    margin-bottom: 25px
+
+.product-row
+  +row(center, flex-start)
+
+.product-image
+  position: relative
+  margin-top: 30px
+  +tablet
+    +hide
+
+.product-image__package
+  width: 265px
+  height: 400px
+  object-fit: cover
+
+.product-image__beans
+  position: absolute
+  border-radius: 50%
+  bottom: -40px
+  right: -20px
+  width: 110px
+  height: 110px
+  border: 3px solid $lightGray
+  overflow: hidden
+  // fix for safari issue
+  -webkit-mask-image: -webkit-radial-gradient(white, black)
+  img
+    transition: .3s
+    width: 100%
+    height: 100%
+    object-fit: cover
+  .ico
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    font-size: 1.7rem
+  &:hover
+    img
+      transform: scale(1.2)
+
+.product-buy
+  max-width: 340px
+  margin-left: 105px
+  +tablet
+    margin-left: 0
+
+  +phone
+    max-width: 290px
+
+.product-buy__name
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+.product-icons
+  .indicator-wrp
+    margin-top: 6px
+    margin-right: 10px
+
+.indicator-wrp
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  span
+    position: absolute
+    font-weight: 700
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    color: $green
+
+.spades
+  display: inline-block
+  vertical-align: middle
+  .ico
+    display: inline-block
+    vertical-align: middle
+    line-height: 10px
+    margin-right: 10px
+    font-size: 2.4rem
+  span
+    display: inline-block
+    vertical-align: middle
+    text-transform: uppercase
+    font-weight: 700
+    font-size: .8rem
+
+.product-name
+  margin-top: 30px
+  h3
+    font-weight: 900
+    letter-spacing: 2px
+    margin-bottom: 10px
+    font-size: 2.166rem
+  p
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 2px
+
+.product-number
+  display: flex
+  &--big
+    .ico
+      margin-top: 20px
+      margin-right: 10px
+    span
+      font-weight: 900
+      font-size: 4.83rem
+      line-height: 4rem
+  &--small
+    .ico
+      font-size: .5rem
+      margin-top: 3px
+      margin-right: 5px
+    span
+      font-weight: 900
+      font-size: 1.5rem
+      line-height: 1rem
+
+.product-heading
+  margin-bottom: 20px
+  .heading-l2
+    margin-bottom: 10px
+
+.product-rating
+  display: flex
+  align-items: center
+  margin-bottom: 10px
+
+.stars
+  display: flex
+  &__el
+    color: $lightGray
+    margin-right: 10px
+    &--active
+      color: $yellow
+
+.product-description
+  margin-bottom: 20px
+
+.bitter
+  display: flex
+  align-items: center
+  ul
+    display: flex
+    margin-left: 65px
+  +tablet
+    justify-content: space-between
+
+.bitter__el
+  border-radius: 50%
+  width: 5px
+  height: 5px
+  border: 1px solid $mainColor
+  &:not(:last-of-type)
+    margin-right: 10px
+  &--active
+    background-color: $mainColor
+
+.product-buy__purchase
+  margin-top: 20px
+  padding-top: 20px
+  border-top: 1px dashed $lightGray
+
+.purchase-milling
+  display: flex
+  justify-content: space-between
+
+.purchase-type
+  display: flex
+  margin-bottom: 15px
+  input
+    +hide
+
+.purchase-type__el
+  transition: .3s
+  flex: 1
+  height: 35px
+  line-height: 33px
+  border: 1px solid $lightGray
+  font-size: 1.1666rem
+  text-align: center
+  color: $gray
+  &:first-of-type,
+  &:last-of-type
+    position: relative
+    &:after
+      position: absolute
+      transition: .3s
+      top: -1px
+      content: ''
+      height: calc(100% + 2px)
+      width: 1px
+      background-color: $mainColor
+      opacity: 0
+      visibility: hidden
+  &:first-of-type
+    border-right: none
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
+    &:after
+      right: -1px
+  &:last-of-type
+    border-left: none
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
+    &:after
+      left: -1px
+
+input:checked + .purchase-type__el
+  color: $mainColor
+  border-color: $mainColor
+  &:first-of-type,
+  &:last-of-type
+    &:after
+      opacity: 1
+      visibility: visible
+
+.purchase-weight
+  display: flex
+  justify-content: space-between
+  .x-sign
+    align-self: flex-end
+    margin-bottom: 12px
+    font-size: .7rem
+
+.purchase-weight__el
+  input
+    +hide
+  label
+    display: block
+    transition: .3s
+    border-radius: 3px
+    width: 115px
+    height: 35px
+    line-height: 33px
+    border: 1px solid $lightGray
+    color: $gray
+    text-align: center
+    font-size: 1.1666rem
+    +phone
+      width: 105px
+  input:checked + label
+    border-color: $mainColor
+    color: $mainColor
+
+.purchase-amount
+  display: flex
+  justify-content: space-between
+  width: 75px
+  height: 35px
+  line-height: 36px
+  border-radius: 3px
+  border: 1px solid $mainColor
+  overflow: hidden
+  color: $mainColor
+  +phone
+    width: auto
+    min-width: 35px
+    text-align: center
+    display: block
+
+  input
+    text-align: center
+    display: inline-block
+    border: none
+    max-width: 30px
+
+.purchase-amount__option
+  width: 25px
+  text-align: center
+  font-size: 1.2rem
+  user-select: none
+  cursor: pointer
+  transition: .3s
+  &:hover
+    background-color: $lightGray
+  +phone
+    +hide
+
+.purchase-buttons
+  text-align: center
+  .button
+    width: 100%
+    margin-top: 15px
+    margin-bottom: 30px
+    .purchase-sum
+      margin-left: 5px
